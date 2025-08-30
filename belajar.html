@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Saya - Nadhiefa Putri Auliasyifa</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafc;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+    header img {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+    header h1 {font-size: 28px; margin-bottom: 5px;}
+    header p {font-size: 16px; opacity: 0.9;}
+    nav {margin-top: 15px;}
+    nav a {
+      color: #fff; text-decoration: none;
+      margin: 0 12px; font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {color: #ffd369;}
+
+    /* Container */
+    .container {
+      width: 90%; max-width: 1000px;
+      margin: auto; padding: 40px 0;
+    }
+    section {
+      background: #fff; padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      margin-bottom: 15px; font-size: 22px;
+      color: #444; border-left: 5px solid #667eea;
+      padding-left: 10px;
+    }
+
+    /* Skills */
+    .skills-list {margin-top: 10px;}
+    .bar {
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 12px;
+      margin-bottom: 15px;
+    }
+    .fill {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      height: 100%;
+      border-radius: 20px;
+      width: 0;
+      transition: width 2s ease;
+    }
+
+    /* Education */
+    #education ul {list-style: none; padding-left: 0;}
+    #education li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      border-left: 4px solid #667eea;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .project-item {
+      background: #fdfdfd; padding: 20px;
+      border-radius: 12px; border: 1px solid #eee;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+    .project-item h3 {margin-bottom: 10px; color: #333;}
+    .project-item a {
+      display: inline-block; margin-top: 10px;
+      text-decoration: none; color: #fff;
+      background: #667eea; padding: 8px 16px;
+      border-radius: 8px; font-size: 14px;
+      transition: 0.3s;
+    }
+    .project-item a:hover {background: #5a67d8;}
+
+    /* Kontak */
+    .social-links {
+      display: flex; gap: 20px; margin-top: 15px;
+    }
+    .social-links a {
+      display: flex; align-items: center; justify-content: center;
+      width: 45px; height: 45px;
+      border-radius: 50%;
+      background: #f1f1f1;
+      transition: 0.3s;
+    }
+    .social-links a:hover {transform: scale(1.1);}
+    .social-links svg {width: 22px; height: 22px; fill: #667eea;}
+    .social-links a.instagram:hover {background: #e1306c;}
+    .social-links a.tiktok:hover {background: #000;}
+    .social-links a.email:hover {background: #4285f4;}
+
+    /* Footer */
+    footer {
+      text-align: center; padding: 20px 0;
+      background: #333; color: #fff;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Foto profil -->
+    <img src="difapolije.jpg" alt="Foto Profil Nadhiefa">
+    <h1>Nadhiefa Putri Auliasyifa</h1>
+    <p>Pengembang Web | Desainer Grafis | Penulis Konten</p>
+    <nav>
+      <a href="#about">Tentang Saya</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#education">Pendidikan</a>
+      <a href="#projects">Proyek</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p>
+        Halo! Saya <strong>Nadhiefa</strong>, seorang mahasiswa Teknik Informatika di Politeknik Negeri Jember. 
+        Dunia teknologi bagi saya bukan sekadar teori, tapi ruang untuk berkreasi. 
+        Saya suka mendesain tampilan yang menarik, mengotak-atik HTML untuk membuat web sederhana, hingga merakit komputer agar performanya lebih maksimal.
+      </p>
+      <p>
+        Saya percaya bahwa sebuah karya teknologi yang baik adalah gabungan antara fungsi dan estetika. 
+        Karena itu, saya terus berusaha mengasah keterampilan di bidang desain dan pengembangan web, sembari tetap menjaga rasa ingin tahu di dunia hardware.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Keahlian</h2>
+      <div class="skills-list">
+        <p><strong>HTML & JavaScript</strong></p>
+        <div class="bar"><div class="fill" data-width="85%"></div></div>
+
+        <p><strong>Desain Grafis</strong></p>
+        <div class="bar"><div class="fill" data-width="80%"></div></div>
+
+        <p><strong>Perakitan Komputer</strong></p>
+        <div class="bar"><div class="fill" data-width="80%"></div></div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Pendidikan</h2>
+      <ul>
+        <li><strong>Politeknik Negeri Jember</strong> – Teknik Informatika (2024 – Sekarang)</li>
+        <li><strong>SMK</strong> – Teknik Komputer dan Jaringan (2021 – 2023)</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Proyek</h2>
+      <div class="projects-grid">
+        <div class="project-item">
+          <h3>🎨 Desain Grafis</h3>
+          <p>Membuat tampilan visual yang menarik dengan menggabungkan warna, tulisan, dan gambar agar pesan lebih jelas dan estetik.</p>
+          <p><strong>Tools:</strong> Canva, Figma</p>
+          <a href="#" target="_blank">Lihat Proyek</a>
+        </div>
+        <div class="project-item">
+          <h3>💻 Pengembangan Web HTML</h3>
+          <p>Membangun struktur dasar website dengan HTML dan CSS agar tampilan lebih rapi, mudah dibaca, dan user-friendly.</p>
+          <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+          <a href="#" target="_blank">Lihat Proyek</a>
+        </div>
+        <div class="project-item">
+          <h3>🖥️ Perakitan Komputer</h3>
+          <p>Menyusun dan merakit bagian komputer seperti prosesor, RAM, dan storage agar performa sesuai kebutuhan.</p>
+          <p><strong>Skills:</strong> Hardware</p>
+          <a href="#" target="_blank">Lihat Proyek</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Kontak</h2>
+      <p>Hubungi saya melalui email atau media sosial:</p>
+      <div class="social-links">
+        <!-- Email -->
+        <a href="mailto:nadhiefaputri20@gmail.com" class="email" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/nxdfaa._" class="instagram" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <defs>
+              <linearGradient id="instaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#feda75"/>
+                <stop offset="50%" stop-color="#d62976"/>
+                <stop offset="100%" stop-color="#962fbf"/>
+              </linearGradient>
+            </defs>
+            <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"
+              fill="url(#instaGradient)"/>
+          </svg>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@lzerov3" class="tiktok" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22">
+            <path fill="#69C9D0" d="M22 6h5c0.2 1.7 1.1 3.3 2.5 4.4 1.3 1 2.8 1.6 4.5 1.6v5c-1.7 0-3.3-0.3-4.8-0.9v10.6c0 5.5-4.5 10-10 10s-10-4.5-10-10 4.5-10 10-10v5c-2.7 0-5 2.2-5 5s2.3 5 5 5c2.8 0 5-2.3 5-5V6z"/>
+            <path fill="#EE1D52" d="M22 6v24c0 2.8-2.3 5-5 5s-5-2.2-5-5 2.3-5 5-5v-5c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10V11.1c1.4 1 3 1.6 4.8 1.6v-5c-1.7 0-3.2-0.6-4.5-1.6C23.1 9.3 22.2 7.7 22 6z"/>
+            <path fill="#000000" d="M27 11.1v13.9c0 5.5-4.5 10-10 10S7 30.5 7 25s4.5-10 10-10v5c-2.7 0-5 2.2-5 5s2.3 5 5 5c2.8 0 5-2.3 5-5V6h5c0.2 1.7 1.1 3.3 2.5 4.4 1.3 1 2.8 1.6 4.5 1.6v5c-1.7 0-3.3-0.3-4.8-0.9C29.8 14.1 28.4 12.7 27 11.1z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nadhiefa Putri Auliasyifa. Semua Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <!-- Script Animasi Scroll + Skills -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const bars = document.querySelectorAll(".fill");
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if (secTop < triggerBottom) {
+          sec.classList.add("show");
+          if (sec.id === "skills") {
+            bars.forEach(bar => {
+              const width = bar.getAttribute("data-width");
+              bar.style.width = width;
+            });
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+
+</body>
+</html>
